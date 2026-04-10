@@ -158,7 +158,7 @@ export async function buildEpgPwXml(batchSize = 10, delayMs = 300): Promise<stri
 
   const dates: string[] = [];
   const today = new Date();
-  for (let i = 0; i < 7; i++) {
+  for (let i = -5; i < 2; i++) {
     const date = new Date(today);
     date.setDate(today.getDate() + i);
     dates.push(formatDate(date));
